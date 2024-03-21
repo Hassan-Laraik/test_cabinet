@@ -1,0 +1,205 @@
+object FrmPatient: TFrmPatient
+  Left = 312
+  Height = 474
+  Top = 180
+  Width = 440
+  BorderStyle = bsDialog
+  Caption = 'Formulaire Patient'
+  ClientHeight = 474
+  ClientWidth = 440
+  DesignTimePPI = 81
+  LCLVersion = '3.0.0.1'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 440
+    Align = alTop
+    Caption = 'Saisir Les Données Du Patient'
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 42
+    Top = 432
+    Width = 440
+    Align = alBottom
+    Caption = 'Panel2'
+    ClientHeight = 42
+    ClientWidth = 440
+    TabOrder = 1
+    object BtnAnnuler: TButton
+      Left = 339
+      Height = 40
+      Top = 1
+      Width = 100
+      Align = alRight
+      Caption = 'BtnAnnuler'
+      OnClick = BtnAnnulerClick
+      TabOrder = 0
+    end
+    object BtnValider: TButton
+      Left = 239
+      Height = 40
+      Top = 1
+      Width = 100
+      Align = alRight
+      Caption = 'BtnValider'
+      OnClick = BtnValiderClick
+      TabOrder = 1
+    end
+  end
+  object EdtCode: TDBEdit
+    Left = 155
+    Height = 33
+    Top = 59
+    Width = 239
+    DataField = 'codep'
+    DataSource = DM.DSPateints
+    MaxLength = 20
+    TabOrder = 2
+  end
+  object EdtNom: TDBEdit
+    Left = 155
+    Height = 33
+    Top = 104
+    Width = 239
+    DataField = 'nom'
+    DataSource = DM.DSPateints
+    MaxLength = 20
+    TabOrder = 3
+  end
+  object EdtPrenom: TDBEdit
+    Left = 155
+    Height = 33
+    Top = 152
+    Width = 239
+    DataField = 'prenom'
+    DataSource = DM.DSPateints
+    MaxLength = 20
+    TabOrder = 4
+  end
+  object radioSexe: TDBRadioGroup
+    Left = 155
+    Height = 38
+    Top = 200
+    Width = 239
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    Columns = 2
+    DataField = 'sexe'
+    DataSource = DM.DSPateints
+    Items.Strings = (
+      'Homme'
+      'Femme'
+    )
+    TabOrder = 5
+    Values.Strings = (
+      'H'
+      'F'
+    )
+  end
+  object RadioCivilite: TDBRadioGroup
+    Left = 155
+    Height = 30
+    Top = 252
+    Width = 239
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    Columns = 3
+    DataField = 'civilite'
+    DataSource = DM.DSPateints
+    Items.Strings = (
+      'MR'
+      'MME'
+      'MLLE'
+    )
+    TabOrder = 6
+    Values.Strings = (
+      'MONSIEUR'
+      'MADAMME'
+      'DEMOSELLE'
+    )
+  end
+  object EdtGSM: TDBEdit
+    Left = 155
+    Height = 33
+    Top = 296
+    Width = 239
+    DataField = 'gsm'
+    DataSource = DM.DSPateints
+    MaxLength = 10
+    TabOrder = 7
+  end
+  object EdtEmail: TDBEdit
+    Left = 155
+    Height = 33
+    Top = 339
+    Width = 239
+    DataField = 'email'
+    DataSource = DM.DSPateints
+    MaxLength = 100
+    TabOrder = 8
+  end
+  object Label1: TLabel
+    Left = 35
+    Height = 16
+    Top = 65
+    Width = 42
+    Caption = 'Code : '
+  end
+  object Label2: TLabel
+    Left = 53
+    Height = 16
+    Top = 109
+    Width = 40
+    Caption = 'Nom : '
+  end
+  object Label3: TLabel
+    Left = 63
+    Height = 16
+    Top = 168
+    Width = 59
+    Caption = 'Prénom : '
+  end
+  object Label4: TLabel
+    Left = 61
+    Height = 16
+    Top = 199
+    Width = 40
+    Caption = 'Sexe : '
+  end
+  object Label5: TLabel
+    Left = 73
+    Height = 16
+    Top = 242
+    Width = 55
+    Caption = 'Civilité : '
+  end
+  object Label6: TLabel
+    Left = 91
+    Height = 16
+    Top = 307
+    Width = 38
+    Caption = 'GSM : '
+  end
+  object Label7: TLabel
+    Left = 56
+    Height = 16
+    Top = 352
+    Width = 49
+    Caption = 'E.mail : '
+  end
+end

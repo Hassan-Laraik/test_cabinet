@@ -1,0 +1,101 @@
+object FrmBestionPatient: TFrmBestionPatient
+  Left = 280
+  Height = 437
+  Top = 169
+  Width = 949
+  Caption = 'Gestion Des Patients'
+  ClientHeight = 437
+  ClientWidth = 949
+  DesignTimePPI = 81
+  LCLVersion = '3.0.0.1'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 949
+    Align = alTop
+    Caption = 'Panel1'
+    ClientHeight = 42
+    ClientWidth = 949
+    TabOrder = 0
+    object LblRechercher: TEdit
+      Left = 1
+      Height = 40
+      Top = 1
+      Width = 511
+      Align = alClient
+      Alignment = taCenter
+      TabOrder = 0
+    end
+    object BtnSuprimer: TButton
+      Left = 839
+      Height = 40
+      Top = 1
+      Width = 109
+      Align = alRight
+      Caption = 'BtnSuprimer'
+      TabOrder = 1
+    end
+    object BtnModifier: TButton
+      Left = 730
+      Height = 40
+      Top = 1
+      Width = 109
+      Align = alRight
+      Caption = 'BtnModifier'
+      OnClick = BtnModifierClick
+      TabOrder = 2
+    end
+    object BtnNouveau: TButton
+      Left = 621
+      Height = 40
+      Top = 1
+      Width = 109
+      Align = alRight
+      Caption = 'BtnNouveau'
+      OnClick = BtnNouveauClick
+      TabOrder = 3
+    end
+    object BtnRchercher: TButton
+      Left = 512
+      Height = 40
+      Top = 1
+      Width = 109
+      Align = alRight
+      Caption = 'BtnRchercher'
+      TabOrder = 4
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 42
+    Top = 395
+    Width = 949
+    Align = alBottom
+    Caption = 'Panel2'
+    ClientHeight = 42
+    ClientWidth = 949
+    TabOrder = 1
+    object BtnFermer: TButton
+      Left = 784
+      Height = 40
+      Top = 1
+      Width = 164
+      Align = alRight
+      Caption = 'BtnFermer'
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 353
+    Top = 42
+    Width = 949
+    Align = alClient
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.DSPateints
+    TabOrder = 2
+  end
+end

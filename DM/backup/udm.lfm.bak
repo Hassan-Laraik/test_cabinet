@@ -1,0 +1,42 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 324
+  HorizontalOffset = 255
+  VerticalOffset = 183
+  Width = 412
+  object ZCNX: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'test_cabinet'
+    User = 'root'
+    Password = '12345678'
+    Protocol = 'mysql-5'
+    Left = 42
+    Top = 45
+  end
+  object ZtblPAtients: TZTable
+    Connection = ZCNX
+    Active = True
+    TableName = 'patients'
+    Left = 40
+    Top = 120
+  end
+  object DSPateints: TDataSource
+    DataSet = ZtblPAtients
+    Left = 42
+    Top = 184
+  end
+  object ZqryRecherche: TZQuery
+    Connection = ZCNX
+    Params = <>
+    Left = 335
+    Top = 48
+  end
+end
